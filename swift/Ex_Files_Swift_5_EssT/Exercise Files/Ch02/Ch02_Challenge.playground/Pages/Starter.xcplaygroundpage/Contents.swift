@@ -15,17 +15,29 @@
  
  */
 // 1
+var characterName = "Uthred"
+var weaponClassification = "melee"
 
 // 2
+var nickName = "the Fearless"
+characterName += " " + nickName
 
 // 3
+var currentMana = 99.5
 
 // 4
+var manaPercent = String(currentMana/100)
 
 // 5
+var debugStats = "Debug Stats \n\nCharacter Name:  \(characterName) \nWeapon Classification:  \(weaponClassification) \nMana:  \(manaPercent)"
 
 // 6
+var questAccepted = true
+var canQuest = true
 
 // 7
+var questStatus = canQuest && questAccepted
 
 // 8
+debugStats.append(contentsOf: "\n\nQuest Status:  \(questStatus)")
+print(debugStats)
