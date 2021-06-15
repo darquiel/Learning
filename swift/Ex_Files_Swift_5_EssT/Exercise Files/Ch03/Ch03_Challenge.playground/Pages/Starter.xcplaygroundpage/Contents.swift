@@ -15,18 +15,29 @@
  
  */
 // 1
+var shopItemsArray = ["Pack", "Lantern", "Candle", "Torch", "Oil"]
+var shopItemsDictionary: [String: Int] = ["Pack": 15, "Lantern": 50, "Candle": 12, "Torch": 15, "Oil": 3]
 
 // 2
+shopItemsArray.contains("Tinder Box")
 
 // 3
+shopItemsArray.insert("Tinder Box", at: 4)
 
 // 4
-
+var selectItem = shopItemsArray[3]
 // 5
+var selectedItemPrice = shopItemsDictionary[selectItem]
 
 // 6
+var fullArmorSet: Set = ["Hood", "Collar", "Shirt", "Sleeves", "Gloves", "Gambeson"]
+var currentArmorSet: Set = ["Hood", "Shirt", "Gambeson"]
 
 // 7
+var missingArmor = fullArmorSet.subtracting(currentArmorSet)
 
 // 8
+var armorPieceTuple = (name: "Gambeson", cost: 45, canEquip: true)
+armorPieceTuple.canEquip
+armorPieceTuple.cost
 
