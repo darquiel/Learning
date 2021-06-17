@@ -15,10 +15,10 @@
 
  */
 // Test variables
-var itemGathered: String?
+var itemGathered: String? = "Diamond Longsword"
 var isShopOpen: Bool? = true
 
-var blacksmithShop: [String: Int] = ["Bottle": 10, "Shield": 15, "Ocarina": 100]
+var blacksmithShop: [String: Int] = ["Bottle": 10, "Ocarina": 100]
 var questDirectory = [
     "Fetch Gemstones": [
         "Objective": "Retrieve 5 gemstones",
@@ -31,4 +31,20 @@ var questDirectory = [
 ]
 
 // Optional binding
+if let item = itemGathered{
+    print("You found an \(item)")
+} else {
+    print("Sorry, no item found.")
+}
 
+if let shopOpen = isShopOpen, let searchedItem = blacksmithShop["Shield"] {
+    print("We're open \(shopOpen) and we have a \(searchedItem) in stock!")
+} else {
+    print("Sorry either we are not open, or don'o't have your item...")
+}
+
+if let fetchGems = questDirectory["Fetch Gemstones"]?["Objective"] {
+    print("Active ques object: \(fetchGems)")
+} else {
+    print("That quest is no longer available.")
+}

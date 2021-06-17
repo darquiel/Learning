@@ -16,13 +16,45 @@
  
  */
 // 1
+var lefthadnWeapon: String? = "Gladius"
+var righthandWeapon: String?
 
 // 2
+if let leftWeapon = lefthadnWeapon, let rightWeapon = righthandWeapon {
+    print("Looks like your \(leftWeapon) and \(rightWeapon) are an even match for me!")
+} else {
+    print("I didn't bring enough hardware for this...")
+}
 
 // 3
+var playerExp: [String: Int] = ["Bilbo": 250, "Gandalf": 1000, "Thorin": 750]
 
 // 4
+for (player, exp) in playerExp {
+    print("\(player): \(exp)")
+}
 
 // 5
+var level1 = 250
+for (player, exp) in playerExp {
+    guard exp >= level1 else {
+        print("You are not level 1, you need at least \(level1) XP!")
+        continue
+    }
+    print("Great, \(player) is over level 1!")
+}
+    
 
 // 6
+for (player, exp) in playerExp {
+    switch (exp) {
+    case (32):
+        print("\(player) EXP is 32")
+    case (200...500):
+        print("\(player)Exp is in the range")
+    case (let localEXP) where exp > 500:
+        print("\(player) has more exp!, \(localEXP)")
+    default:
+        print("I've gto nothing. for \(player)")
+    }
+}
