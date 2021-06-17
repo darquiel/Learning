@@ -31,30 +31,24 @@ var playerExp: [String: Int] = ["Bilbo": 250, "Gandalf": 1000, "Thorin": 750]
 
 // 4
 for (player, exp) in playerExp {
-    print("\(player): \(exp)")
-}
-
-// 5
-var level1 = 250
-for (player, exp) in playerExp {
-    guard exp >= level1 else {
-        print("You are not level 1, you need at least \(level1) XP!")
+    
+    // 5
+    guard exp > 1 else {
+        print("\(player), you need some serious help...")
         continue
     }
-    print("Great, \(player) is over level 1!")
-}
-    
-
-// 6
-for (player, exp) in playerExp {
+    // 6
     switch (exp) {
     case (32):
-        print("\(player) EXP is 32")
+        print("\(player) Looking good!")
     case (200...500):
-        print("\(player)Exp is in the range")
-    case (let localEXP) where exp > 500:
-        print("\(player) has more exp!, \(localEXP)")
+        print("\(player) - Getting Better everyday")
+    case (let localEXP) where localEXP > 500:
+        print("\(player) - Time to level up!")
     default:
-        print("I've gto nothing. for \(player)")
+        print("I've got nothing...")
     }
 }
+
+
+
