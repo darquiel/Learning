@@ -13,7 +13,16 @@
 
  */
 // Function types
+func computBonusDamage(damageBase: Int) -> Int {
+    return damageBase * 4
+}
 
+// (Int) -> Int
 
 // Functions as parameters
+func dealDamage(baseDamage: Int, bonusDamage: (Int) -> Int) {
+    let bonus = bonusDamage(baseDamage)
+    print("Base Damage: \(baseDamage)\nBonus Damage: \(bonus)")
+}
 
+dealDamage(baseDamage: 55, bonusDamage: computBonusDamage)
