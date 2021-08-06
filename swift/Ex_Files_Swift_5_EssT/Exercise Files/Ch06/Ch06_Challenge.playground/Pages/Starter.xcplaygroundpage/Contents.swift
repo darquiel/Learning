@@ -16,18 +16,40 @@
  
  */
 // 1
+class Item {
+    var name: String
+    var price: Int
 
-// 2
+    //4
+    var secret: BonusEffect?
+    
+    // 2
+    init(name: String, price: Int) {
+        self.name = name
+        self.price = Price
+    }
+
+}
 
 // 3
-
-// 4
+struct BonusEffect {
+    var bonus: Int
+    
+}
 
 // 5
-
-// 6
+class Inventory {
+    var storedItems:[Item]
+    //6
+    init(items: [Item]) {
+        self.storedItems = items
+    }
+}
 
 // 7
+var partyWideEffect = BonusEffect(bonus: 15)
+var potionb = Item(name: "Healing Potion", price: 35)
+
 
 // 8
 
